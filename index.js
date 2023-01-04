@@ -17,6 +17,9 @@ app.use(express.json());
 // routes
 app.use("/api/auth", auth);
 app.use("/api/users", user);
+app.get('/',(req,res)=>{
+  res.send("kk")
+})
 
 // server listen
 app.listen(process.env.PORT || 4000, () => {
