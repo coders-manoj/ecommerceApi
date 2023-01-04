@@ -10,6 +10,7 @@ const userSchema = new Schema(
       unique: true,
       max: [15, "Please enter valid mobile"],
     },
+    img: { type: String },
     email: { type: String, required: true, unique: true },
     password: { type: String, required: true, min: [6, "Too Short"] },
   },
