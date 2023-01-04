@@ -17,8 +17,10 @@ app.use(express.json());
 // routes
 app.use("/api/auth", auth);
 app.use("/api/users", user);
-app.get('/',(req,res)=>{
-  res.send("kk")
+
+
+app.get('/', (req, res) => {
+  res.send('Hey this is my API running 🥳')
 })
 
 // server listen
