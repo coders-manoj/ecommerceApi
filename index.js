@@ -4,6 +4,7 @@ const app = express();
 require("dotenv/config");
 const auth = require("./routes/auth");
 const user = require("./routes/user");
+const product = require("./routes/product");
 
 // connection with database
 mongoose.set("strictQuery", false);
@@ -17,11 +18,11 @@ app.use(express.json());
 // routes
 app.use("/api/auth", auth);
 app.use("/api/users", user);
+app.use("/api/products", product);
 
-
-app.get('/', (req, res) => {
-  res.send('Hey this is my API running 🥳')
-})
+app.get("/", (req, res) => {
+  res.send("Hey this is my API running 🥳");
+});
 
 // server listen
 app.listen(process.env.PORT || 4000, () => {

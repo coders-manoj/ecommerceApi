@@ -18,7 +18,7 @@ router.put("/:id", verifyToken, upload.single("file"), async (req, res) => {
     const finduser = await user.findOne({ _id: req.params.id });
     res.status(201).json({ message: "updated user", data: finduser });
   } else {
-    res.status(401).json("you are not able to updtae");
+    res.status(401).json("you are not able to update");
   }
 });
 
